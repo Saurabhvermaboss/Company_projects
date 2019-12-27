@@ -32,7 +32,7 @@ public List<Users> getuser()
 
 }
 	@PostMapping("users")
-	public Users postuser(Users users) {
+	public Users postuser(@RequestBody Users users) {
 		 repo.save(users);
 		return users;	
 	}
@@ -45,7 +45,7 @@ public List<Users> getuser()
 	}
 	
 	@PutMapping("users")
-	public Users updatetuser( Users users) {
+	public Users updatetuser(@RequestBody Users users) {
 		 repo.save(users);
 		return users;	
 	}
